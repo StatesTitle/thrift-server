@@ -6,7 +6,7 @@ import {
     LogFunction,
     readThriftMethod,
     ThriftConnection,
-} from '@creditkarma/thrift-server-core'
+} from '@statestitle/thrift-server-core'
 
 import {
     IConnectionOptions,

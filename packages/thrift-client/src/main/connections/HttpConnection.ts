@@ -1,4 +1,4 @@
-import * as Core from '@creditkarma/thrift-server-core'
+import * as Core from '@statestitle/thrift-server-core'
 
 import * as request from 'request'
 import {
@@ -178,9 +178,9 @@ export class HttpConnection extends Core.ThriftConnection<RequestOptions> {
             this.Protocol,
         )
 
-        const filters: Array<RequestHandler<
-            RequestOptions
-        >> = this.filtersForMethod(requestMethod)
+        const filters: Array<
+            RequestHandler<RequestOptions>
+        > = this.filtersForMethod(requestMethod)
 
         const thriftRequest: IThriftRequest<RequestOptions> = {
             data: dataToSend,

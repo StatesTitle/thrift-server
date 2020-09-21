@@ -19,9 +19,9 @@ We're going to go through this step-by-step.
 All Thrift Server libraries define inter-dependencies as peer dependencies to avoid type collisions.
 
 ```sh
-$ npm install --save-dev @creditkarma/thrift-typescript
-$ npm install --save @creditkarma/thrift-server-core
-$ npm install --save @creditkarma/thrift-client
+$ npm install --save-dev @statestitle/thrift-typescript
+$ npm install --save @statestitle/thrift-server-core
+$ npm install --save @statestitle/thrift-client
 $ npm install --save request
 $ npm install --save @types/request
 ```
@@ -37,7 +37,7 @@ service Calculator {
 
 ### Codegen
 
-Requires @creditkarma/thrift-typescript >= v3.0.0
+Requires @statestitle/thrift-typescript >= v3.0.0
 
 Add a script to your package.json to codegen. The 'target' option is important to make thrift-typescript generate for this library instead of the Apache libraries.
 
@@ -69,7 +69,7 @@ When creating a client using this method Thrift Client uses the [Request library
 ```typescript
 import {
     createHttpClient
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 
 import { CoreOptions } from 'request'
 
@@ -99,7 +99,7 @@ The available options are:
 * register (optional): A list of filters to apply to your client. More on this later.
 * requestImpl (optional): Provide a request implementation. Defaults to 'request' module.
 
-Currently `@creditkarma/thrift-server-core"` only supports buffered transport and binary or compact protocols.
+Currently `@statestitle/thrift-server-core"` only supports buffered transport and binary or compact protocols.
 
 ```typescript
 type TransportType = 'buffered'
@@ -120,7 +120,7 @@ import {
     RequestInstance,
     HttpConnection,
     IHttpConnectionOptions,
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 import * as request from 'request'
 import { CoreOptions } from 'request'
 
@@ -163,7 +163,7 @@ Using the `createTcpClient` function you pass in two arguments, the first is you
 ```typescript
 import {
     createTcpClient
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 
 import { Calculator } from './codegen/calculator'
 
@@ -193,7 +193,7 @@ The available options are:
 ```typescript
 import {
     TcpConnection,
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 
 import { Calculator } from './codegen/calculator'
 
@@ -220,7 +220,7 @@ Related to context you will notice that our Thrift service client is a generic `
 ```typescript
 import {
     createHttpClient
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 
 import { CoreOptions } from 'request'
 import * as express from 'express'
@@ -343,7 +343,7 @@ You could do something like this:
 import {
     createHttpClient,
     IThriftRequest,
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 
 import { Calculator } from './codegen/calculator'
 
@@ -372,7 +372,7 @@ To apply filters to the response you would call `.then` on the `next` function. 
 import {
     createHttpClient,
     IThriftRequest
-} from '@creditkarma/thrift-client'
+} from '@statestitle/thrift-client'
 
 import { Calculator } from './codegen/calculator'
 

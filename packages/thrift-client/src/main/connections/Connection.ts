@@ -7,7 +7,7 @@ import {
     TProtocol,
     TTransport,
     TType,
-} from '@creditkarma/thrift-server-core'
+} from '@statestitle/thrift-server-core'
 
 import * as net from 'net'
 import * as tls from 'tls'

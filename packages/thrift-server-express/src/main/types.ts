@@ -3,7 +3,7 @@ import * as express from 'express'
 import {
     IThriftProcessor,
     IThriftServerOptions,
-} from '@creditkarma/thrift-server-core'
+} from '@statestitle/thrift-server-core'
 
 export type IExpressServerOptions<
     TProcessor extends IThriftProcessor<express.Request>

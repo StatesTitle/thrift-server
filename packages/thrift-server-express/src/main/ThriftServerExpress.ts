@@ -6,7 +6,7 @@ import {
     ITransportConstructor,
     process,
     readThriftMethod,
-} from '@creditkarma/thrift-server-core'
+} from '@statestitle/thrift-server-core'
 
 import * as express from 'express'
 

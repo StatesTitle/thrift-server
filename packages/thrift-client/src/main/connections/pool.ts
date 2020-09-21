@@ -1,4 +1,4 @@
-import { LogFunction } from '@creditkarma/thrift-server-core'
+import { LogFunction } from '@statestitle/thrift-server-core'
 import * as GenericPool from 'generic-pool'
 import { Connection, createConnection, IConnectionConfig } from './Connection'
 

@@ -1,4 +1,4 @@
-import { IThriftProcessor } from '@creditkarma/thrift-server-core'
+import { IThriftProcessor } from '@statestitle/thrift-server-core'
 import * as bodyParser from 'body-parser'
 import * as express from 'express'
 

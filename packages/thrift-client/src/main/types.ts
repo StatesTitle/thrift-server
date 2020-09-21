@@ -3,7 +3,7 @@ import {
     LogFunction,
     ProtocolType,
     TransportType,
-} from '@creditkarma/thrift-server-core'
+} from '@statestitle/thrift-server-core'
 
 import * as GenericPool from 'generic-pool'
 

@@ -8,12 +8,12 @@ Adding Thrift support to Express is as easy as just including the provided middl
 
 ### Codegen
 
-Requires @creditkarma/thrift-typescript >= v3.0.0
+Requires @statestitle/thrift-typescript >= v3.0.0
 
-The easiest way to get started is to generate your thrift services using @creditkarma/thrift-typescript.
+The easiest way to get started is to generate your thrift services using @statestitle/thrift-typescript.
 
 ```sh
-npm install --save-dev @creditkarma/thrift-typescript
+npm install --save-dev @statestitle/thrift-typescript
 ```
 
 Add a script to your package.json to codegen. The 'target' option is important to make thrift-typescript generate for this library instead of the Apache libraries.
@@ -38,7 +38,7 @@ service Calculator {
 ```sh
 npm install --save express
 npm install --save thrift
-npm install --save @creditkarma/thrift-server-express
+npm install --save @statestitle/thrift-server-express
 ```
 
 ### Use the Plugin
@@ -107,7 +107,7 @@ The factory function takes one additional config options `path`, the path on whi
 
 ```typescript
 import * as express from 'express'
-import { createThriftServer } from '@creditkarma/thrift-server-express'
+import { createThriftServer } from '@statestitle/thrift-server-express'
 import { Calculator } from './codegen/calculator'
 
 const PORT = 8080

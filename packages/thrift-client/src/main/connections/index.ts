@@ -4,7 +4,7 @@ import {
     deepMerge,
     IClientConstructor,
     ThriftClient,
-} from '@creditkarma/thrift-server-core'
+} from '@statestitle/thrift-server-core'
 
 import { HttpConnection } from './HttpConnection'
 import { NullConnection } from './NullConnection'
